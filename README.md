@@ -1,20 +1,17 @@
-name: daily_task_creator
-description: A task manager with XP system
-publish_to: 'none'
-version: 1.0.0+1
+import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
 
-environment:
-  sdk: ">=2.17.0 <4.0.0"
+void main() {
+  runApp(DailyTaskCreatorApp());
+}
 
-dependencies:
-  flutter:
-    sdk: flutter
-
-  cupertino_icons: ^1.0.2
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-flutter:
-  uses-material-design: true
+class DailyTaskCreatorApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Daily Task Creator',
+      theme: ThemeData(primarySwatch: Colors.indigo),
+      home: HomeScreen(),
+    );
+  }
+}
